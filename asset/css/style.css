@@ -82,6 +82,10 @@ section {
     flex-wrap: wrap;
     width: 100%;
 
+    &:only-of-type {
+      margin: 15px;
+    }
+
     div:first-child {
       display: flex;
       justify-content: center;
@@ -104,7 +108,7 @@ section {
       button {
         width: 124px;
         height: 35px;
-        transition: 0.5s ease;
+        transition: 0.1s ease;
       }
     }
 
@@ -128,15 +132,48 @@ section {
     background-color: #fff;
     border: 4px #000 solid;
     padding: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
     overflow: scroll;
 
+    .row__wrap {
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1vw;
 
+      div {
+        height: 5vw;
+        width: 5vw;
+        border-radius: 100%;
+        border: 0.2vw #000 dashed;
+        margin: 0.5vw;
+      }
+
+      div.drawed {
+        border: 0.2vw #000 solid;
+      }
+    }
+  }
+
+  /* 
+    height: 5vw;
+    width: 5vw;
+    border-radius: 100%;
+    border: 0.2vw #000 dashed;
+    display: flex;
+    flex-wrap: wrap; 
+  */
+
+  /*
     >div {
-      /* margin: 1.5vw; */
       display: flex;
       justify-content: center;
       gap: 1vw;
-      /* flex-wrap: wrap-reverse; */
+      flex-wrap: wrap;
 
       div {
         height: 5vw;
@@ -144,16 +181,5 @@ section {
         border-radius: 100%;
         border: 0.2vw #000 dashed;
       }
-    }
-
-    /* 
-    height: 5vw;
-    width: 5vw;
-    border-radius: 100%;
-    border: 0.2vw #000 dashed;
-    display: flex;
-    flex-wrap: wrap; 
     */
-  }
-
 }
